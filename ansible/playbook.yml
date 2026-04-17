@@ -1,0 +1,30 @@
+- name: Configure application server
+  hosts: app_servers
+  become: true
+  gather_facts: true
+
+  roles:
+    - docker
+    - nginx
+
+  tasks:
+    - name: Pull and run Node.js app
+      community.docker.docker_container:
+        name: nodejs_app
+        image: ayush272001/nodejs-app:latest
+        state: started
+        restart_policy: always
+        ports:
+          - "3000:3000"
+        environment:
+          NODE_ENV: production
+    - name: Verify app is running
+      uri:
+        url: http://localhost:3000/health
+        method: GET
+        status_code: 200
+      retries: 5
+      delay: 5
+
+
+
