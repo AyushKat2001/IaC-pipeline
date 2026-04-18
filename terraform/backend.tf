@@ -1,9 +1,9 @@
 terraform {
   backend "s3" {
-    bucket = "my-terraform-state-bucket"
+    bucket = "terraform-state-ayush"
     key    = "path/to/my/terraform.tfstate"
-    region = "us-west-1"
-    dynamodb_table = "value"
+    region = "us-east-1"
+    dynamodb_table = "terraform-state-lock"
     encrypt = true
     
   }
