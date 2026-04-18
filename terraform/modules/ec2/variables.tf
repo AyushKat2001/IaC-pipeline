@@ -21,3 +21,7 @@ variable "instance_type" {
 variable "allowed_ssh_cidr" {
   type = string
 }
+
+variable "public_key" {
+  type = string
+}
