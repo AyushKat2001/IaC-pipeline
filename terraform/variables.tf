@@ -26,6 +26,9 @@ variable "allowed_ssh_cidr" {
     description = "The CIDR block allowed to access EC2 instances via SSH."
     type        = string
     default     = "0.0.0.0/0"
+}
 
-  
+variable "public_key" {
+    description = "The public key for EC2 instance SSH access."
+    type        = string
 }

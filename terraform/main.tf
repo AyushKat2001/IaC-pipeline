@@ -26,6 +26,7 @@ module "ec2" {
     subnet_id = module.vpc.public_subnet_id
     instance_type = var.ec2_instance_type
     allowed_ssh_cidr = var.allowed_ssh_cidr
+    public_key = var.public_key
 }
 
 resource "aws_s3_bucket" "app_storage" {
