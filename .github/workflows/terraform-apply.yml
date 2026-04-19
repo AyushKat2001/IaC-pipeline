@@ -6,6 +6,8 @@ on:
             - main
         paths:
             - 'terraform/**'
+env:
+    TF_VAR_public_key: ${{ secrets.EC2_PUBLIC_KEY }}
 
 jobs:
     apply:
