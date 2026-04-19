@@ -22,25 +22,6 @@ The idea: your entire infrastructure is code. A VPC, subnet, EC2 server, S3 buck
 ---
 ![Pic](screenshots/diagram.png)
 
-
-```
-Developer merges to main
-          ↓
-GitHub Actions triggers Terraform Apply
-          ↓
-Terraform provisions AWS infrastructure
-VPC → Subnet → Security Group → EC2 → S3
-          ↓
-Terraform outputs the EC2 public IP
-          ↓
-GitHub Actions passes IP to Ansible
-          ↓
-Ansible SSHs into the server and configures it
-Installs Docker → Installs Nginx → Pulls and runs the app
-          ↓
-App is live at http://EC2_PUBLIC_IP/health
-```
-
 ---
 
 ## Stack
