@@ -136,9 +136,6 @@ Runs the full pipeline end to end — `terraform apply` to provision AWS resourc
 ![Pic](screenshots/pipeline.png)
 
 ---
-![Pic](screenshots/pipeline.png)
-
----
 ![Pic](screenshots/apply.png)
 
 ---
