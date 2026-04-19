@@ -16,7 +16,7 @@
         restart_policy: always
         ports:
           - "3000:3000"
-        environment:
+        env:
           NODE_ENV: production
     - name: Verify app is running
       uri:

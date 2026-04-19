@@ -24,4 +24,4 @@ variable "allowed_ssh_cidr" {
 
 variable "public_key" {
   type = string
-}
+} # Variable to hold the public key for SSH access to EC2 instances.
