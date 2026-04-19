@@ -5,13 +5,6 @@
 **Fully automated AWS infrastructure provisioning using Terraform and Ansible.**
 Push code to main. GitHub Actions provisions the entire AWS environment and configures the server automatically — no manual clicks in the AWS console.
 
-![Terraform Apply](https://github.com/ayush272001/iac-pipeline/actions/workflows/terraform-apply.yml/badge.svg)
-![Terraform Plan](https://github.com/ayush272001/iac-pipeline/actions/workflows/terraform-plan.yml/badge.svg)
-![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat&logo=terraform&logoColor=white)
-![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=flat&logo=ansible&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazonaws&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=githubactions&logoColor=white)
-
 </div>
 
 ---
@@ -25,6 +18,10 @@ The idea: your entire infrastructure is code. A VPC, subnet, EC2 server, S3 buck
 ---
 
 ## How it works
+
+---
+![Pic](screenshots/diagram.png)
+
 
 ```
 Developer merges to main
@@ -154,7 +151,21 @@ Runs `terraform fmt`, `terraform validate`, and `terraform plan`. Shows exactly 
 
 Runs the full pipeline end to end — `terraform apply` to provision AWS resources, reads the EC2 public IP from Terraform outputs, writes it to Ansible inventory, sets up SSH, installs Ansible, and runs the playbook to configure the server and deploy the app.
 
+### Pipeline Success and Resources Initialized
+![Pic](screenshots/pipeline.png)
+
 ---
+![Pic](screenshots/pipeline.png)
+
+---
+![Pic](screenshots/apply.png)
+
+---
+![Pic](screenshots/ec2.png)
+
+---
+![Pic](screenshots/vpc.png)
+
 
 ## Security — GitHub Secrets
 
@@ -216,6 +227,10 @@ terraform apply
 ```
 
 After apply completes, visit `http://YOUR_EC2_IP/health` — the app should be responding.
+
+### App Running on the EC2 Instance
+---
+![Pic](screenshots/app.png)
 
 ---
 
