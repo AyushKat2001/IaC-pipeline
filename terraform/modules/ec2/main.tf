@@ -73,4 +73,4 @@ resource "aws_instance" "app" {
         Environment = var.environment
     }
   
-}
+} # Resource to create an EC2 instance with specified AMI, instance type, key pair, subnet, and security group. Also configures root block device and tags for the instance.
