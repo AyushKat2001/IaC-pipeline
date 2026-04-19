@@ -1,4 +1,4 @@
-name: Terraform Apply
+name: Terraform Apply # This workflow applies Terraform configuration and runs Ansible playbook on the provisioned EC2 instance.
 
 on:
     push:
