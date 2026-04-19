@@ -1,4 +1,4 @@
-terraform {
+terraform { 
   backend "s3" {
     bucket = "terraform-state-ayush"
     key    = "path/to/my/terraform.tfstate"
@@ -7,4 +7,4 @@ terraform {
     encrypt = true
     
   }
-}
+} # Configure Terraform to use S3 for state storage and DynamoDB for state locking.
