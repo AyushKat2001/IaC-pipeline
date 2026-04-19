@@ -52,4 +52,4 @@ resource "aws_s3_bucket_public_access_block" "app_storage" {
     ignore_public_acls      = true
     restrict_public_buckets = true  
   
-}
+} # Create an S3 bucket for application storage with versioning and public access block enabled.
